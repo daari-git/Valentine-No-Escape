@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine Proposal</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            font-family: Arial, sans-serif;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+        }
+        h2 {
+            color: #e91e63;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .yes {
+            background: #4CAF50;
+            color: white;
+        }
+        .no {
+            background: #e91e63;
+            color: white;
+        }
+        .photo-space {
+            width: 100px;
+            height: 100px;
+            background: #eee;
+            margin: 10px auto;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        .photo-space img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .subtext {
+            font-size: 14px;
+            color: gray;
+            margin-top: 10px;
+        }
+        .message-box {
+            margin-top: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 14px;
+            color: #e91e63;
+            font-weight: bold;
+            display: none;
+        }
+        .celebration {
+            display: none;
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .hearts {
+            font-size: 24px;
+            color: red;
+            animation: float 2s infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="card" id="proposalCard">
+        <h2>Are you really really sure about that no? 🥺</h2>
+        <div class="photo-space">
+            <img src="new.jpeg" alt="Your Photo">
+        </div>
+        <div class="buttons">
+            <button class="yes" id="yesButton">Yes, I'll be your Valentine! 💖</button>
+            <button class="no" id="noButton">No 💔</button>
+        </div>
+        <div class="message-box" id="messageBox">Please, I really love you 💕</div>
+        <div class="subtext">My mom said we'd be cute together...</div>
+    </div>
+    
+    <div class="celebration" id="celebration">
+        <h1 style="color: #e91e63;">YAAAAAY! 🎉</h1>
+        <p>Thanks! You've made me the happiest person alive! 🥰</p>
+        <div class="photo-space">
+            <img id="celebrationPhoto" src="new.jpeg" alt="Celebration Photo">
+        </div>
+        <div class="hearts">❤️💖💕💞💓</div>
+    </div>
+    
+    <script>
+        const noButton = document.getElementById("noButton");
+        const messageBox = document.getElementById("messageBox");
+        const messages = [
+            "You’re breaking my heart! 💔",
+            "Give me a chance, please! 🥹",
+            "Just one date? Pretty please? 🥰",
+            "I promise to make you happy! 💕",
+            "Don’t make me cry... 😢",
+            "You’re my soulmate, don’t say no! ❤️",
+            "Imagine how cute our love story would be! 😍",
+            "I wrote a poem for you... But you said no 😭",
+            "You’re too special to let go! 💖",
+            "Just say yes, and I’ll love you forever! 💞",
+            "But I already told my mom about us! 😭",
+            "You're my dream come true, don't say no! 💕",
+            "Just one date, and you'll see how amazing we are! 🥰",
+            "I baked cookies for you... Don't make me eat them alone! 🍪😢",
+            "We are meant to be, can’t you see? 💞",
+            "What if I promise to bring you chocolates every day? 🍫😍",
+            "You're making this so hard for me! 😭",
+            "Even Romeo and Juliet weren’t this complicated! 🎭",
+            "You saying no is illegal in my heart’s laws! 🚔💘",
+            "You’re the missing piece of my heart puzzle! 🧩💖"
+                    ];
+        
+        noButton.addEventListener("click", () => {
+            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            messageBox.textContent = randomMessage;
+            messageBox.style.display = "block";
+        });
+        
+        document.getElementById("yesButton").addEventListener("click", () => {
+            document.getElementById("proposalCard").style.display = "none";
+            document.getElementById("celebration").style.display = "block";
+        });
+    </script>
+</body>
+</html>
