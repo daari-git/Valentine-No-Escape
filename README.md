@@ -6,12 +6,13 @@ This is a fun interactive Valentine proposal page where the user is asked if the
 1. Upload Your Crush's Photo
 2. Replace new.jpg with a photo of your crush.
 3. Make sure the filename remains new.jpg or update it in index.html.
-4. Run the Project
-5. Open index.html in your browser.
-6. Use Live Server in VS Code for a better experience.
-7. Share the Fun!
-8. Host the project on GitHub Pages, Vercel, or Netlify.
-9. Send the link to your crush! 😍
+4. Also put your crush name in ............
+5. Run the Project
+6. Open index.html in your browser.
+7. Use Live Server in VS Code for a better experience.
+8. Share the Fun!
+9. Host the project on GitHub Pages, Vercel, or Netlify.
+10. Send the link to your crush! 😍
 
 # 📸 Changing the Crush's Photo
 Navigate to the assets folder (or wherever images are stored).
