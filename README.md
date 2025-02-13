@@ -4,7 +4,7 @@ This is a fun interactive Valentine proposal page where the user is asked if the
 
 # 🚀 How to Use
 1. Upload Your Crush's Photo
-2. Replace new.jpg with a photo of your crush.
+2. Replace new.avif with a photo of your crush.
 3. Make sure the filename remains new.jpg or update it in index.html.
 4. Also put your crush name in ............
 5. Run the Project
